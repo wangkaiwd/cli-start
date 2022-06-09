@@ -7,9 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "start": "",
-    "build": "",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": ""
   },
   "repository": {
     "type": "git",
