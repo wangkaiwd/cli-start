@@ -15,7 +15,12 @@
     /* Type Checking */
     "strict": true,
     /* Enable all strict type-checking options. */
-    "skipLibCheck": true
+    "skipLibCheck": true,
     /* Skip type checking all .d.ts files. */
-  }
+    "declaration": false,
+    "outDir": "dist"
+  },
+  "include": [
+    "lib/**/*"
+  ]
 }

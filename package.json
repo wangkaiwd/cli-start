@@ -1,5 +1,5 @@
 {
-  "name": "cli-start",
+  "name": "@sppk/vue-cli",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,8 +8,9 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "start": "",
-    "build": ""
+    "start": "node -r ts-node/register ./lib/cli.ts",
+    "clean": "rm -rf dist",
+    "build": "pnpm run clean && tsc"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
   },
   "homepage": "https://github.com/wangkaiwd/cli-start#readme",
   "devDependencies": {
+    "@types/node": "^17.0.41",
+    "ts-node": "^10.8.1",
     "typescript": "^4.7.3"
   },
   "dependencies": {
