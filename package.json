@@ -1,0 +1,32 @@
+{
+  "name": "cli-start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "",
+    "build": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangkaiwd/cli-start.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangkaiwd/cli-start/issues"
+  },
+  "homepage": "https://github.com/wangkaiwd/cli-start#readme",
+  "devDependencies": {
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "commander": "^9.3.0",
+    "inquirer": "^8.2.4"
+  }
+}
