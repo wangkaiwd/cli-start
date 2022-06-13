@@ -1,12 +1,21 @@
 #!/usr/bin/env node
-import { program } from 'commander';
+
+import { Command } from 'commander';
+import pkg from '../package.json';
+
+const program = new Command();
+const { version } = pkg;
+program
+  .name('vue-cli')
+  .description('CLI to create vue project')
+  .version(version);
 
 program
-  .option('--first')
-  .option('-s, --separator <char>');
+  .command('create [name]', 'Create a vue project')
+  .description('Create vue project')
+  .option('-b, --bare', 'create a bare project')
+  .action((name, options) => {
+    console.log(name, options);
+  });
 
 program.parse();
-
-const options = program.opts();
-const limit = options.first ? 1 : undefined;
-console.log(program.args[0].split(options.separator, limit));

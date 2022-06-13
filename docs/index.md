@@ -1,9 +1,11 @@
 ## Develop
 
+* ts-node
+
 ### Build resolution
 
 * rollup
-* ts-node + tsc
+* tsc
 
 ### Debug
 
