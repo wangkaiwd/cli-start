@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
+import chalk from 'chalk';
 import pkg from '../package.json';
 import create from './core/create';
 
@@ -30,4 +31,12 @@ program
   .option('-b, --bare', 'create a bare project')
   .action((name, options) => create(options));
 
+// https://github.com/tj/commander.js/#custom-event-listeners
+program.on('--help', () => {
+  console.log();
+  console.log(`  Run ${chalk.cyan('vue <command> --help')} for detailed usage of given command.`);
+  console.log();
+});
+
 program.parse();
+

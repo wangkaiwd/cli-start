@@ -1,5 +1,5 @@
 ## Develop
-
+* [pure esm package](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
 * ts-node
 
 ### Build resolution
@@ -21,6 +21,7 @@ node --inspect-brk -r ts-node/register path/to/ts
 
 * [commander](https://github.com/tj/commander.js/)
 * [cac](https://github.com/cacjs/cac)
+* [yargs](https://github.com/yargs/yargs)
 
 some knowledge:
 
