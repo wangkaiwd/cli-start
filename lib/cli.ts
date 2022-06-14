@@ -12,7 +12,7 @@ const { version } = pkg;
 // fallback to using the script name from the full arguments passed into `.parse()`
 // vue: script name is `vue.js`
 // this project: script name is cli
-
+console.log(`Vue CLI ${version}`);
 program
   .name('vue')
   .version(version)

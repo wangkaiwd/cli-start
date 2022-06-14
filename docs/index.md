@@ -4,8 +4,14 @@
 
 ### Build resolution
 
+User doesn't need declaration file
+
 * rollup
 * tsc
+
+Issue:
+
+* [tsc command not use `include` config in `tsconfig.json`](https://github.com/Microsoft/TypeScript/issues/19798)
 
 ### Debug
 
