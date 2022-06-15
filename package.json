@@ -13,7 +13,7 @@
     "build": "pnpm run clean && tsc"
   },
   "bin": {
-    "vue": "./dist/lib/cli.js"
+    "vt": "./dist/lib/cli.js"
   },
   "repository": {
     "type": "git",

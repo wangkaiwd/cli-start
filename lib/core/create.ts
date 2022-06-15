@@ -1,4 +1,5 @@
-import inquirer from 'inquirer';
+import inquirer, { prompts } from 'inquirer';
+import { cwd } from 'process';
 
 interface CreateOptions {
   bare?: boolean;
@@ -13,15 +14,15 @@ const create = async (options: CreateOptions) => {
       {
         name: 'Babel',
         value: 'babel',
-        short: 'bl'
       },
       {
         name: 'TypeScript',
         value: 'typescript',
-        short: 'ts'
       }
     ]
   });
+  // create project according selection
+
 };
 
 export default create;
