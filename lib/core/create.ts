@@ -1,5 +1,11 @@
-import inquirer, { prompts } from 'inquirer';
+import inquirer from 'inquirer';
 import { cwd } from 'process';
+import chalk from 'chalk';
+import fs from 'fs';
+import glob from 'glob';
+import path from 'path';
+
+console.log('meta', import.meta);
 
 interface CreateOptions {
   bare?: boolean;
@@ -22,7 +28,9 @@ const create = async (options: CreateOptions) => {
     ]
   });
   // create project according selection
-
+  console.log(chalk.cyan('start create project ....'));
+  const files = glob.sync(path.resolve(__dirname, 'templates/test/*'));
+  console.log('files', files);
 };
 
 export default create;

@@ -20,6 +20,6 @@ export default {
 
 <style scoped>
 .app {
-
+  font-size: 40px;
 }
 </style>

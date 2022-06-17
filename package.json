@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/wangkaiwd/cli-start#readme",
   "devDependencies": {
+    "@types/glob": "^7.2.0",
     "@types/inquirer": "^8.2.1",
     "@types/node": "^17.0.41",
     "ts-node": "^10.8.1",
@@ -35,6 +36,7 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^9.3.0",
+    "glob": "^8.0.3",
     "inquirer": "^8.2.4"
   }
 }
