@@ -29,7 +29,7 @@ program
   .command('create <app-name>')
   .description('create a new project powered by vue-cli-service')
   .option('-b, --bare', 'create a bare project')
-  .action((name, options) => create(options));
+  .action((name, options) => create(name, options));
 
 // https://github.com/tj/commander.js/#custom-event-listeners
 program.on('--help', () => {

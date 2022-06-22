@@ -8,9 +8,9 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "start": "node -r ts-node/register ./lib/cli.ts",
-    "clean": "rm -rf dist",
-    "build": "pnpm run clean && tsc"
+    "start": "pnpm clean && tsc -w --sourceMap",
+    "build": "pnpm clean && tsc",
+    "clean": "rm -rf dist"
   },
   "bin": {
     "vt": "./dist/lib/cli.js"

@@ -1,6 +1,13 @@
 ## Develop
 * [pure esm package](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
-* ts-node
+
+Execute following command:
+
+```shell
+pnpm link
+cd test
+vt create starter
+```
 
 ### Build resolution
 
@@ -15,11 +22,8 @@ Issue:
 
 ### Debug
 
-ts-node:
+How to debug ?
 
-```shell
-node --inspect-brk -r ts-node/register path/to/ts
-```
 
 ### Record
 
@@ -41,6 +45,7 @@ some knowledge:
 * each option can have a short flag(single character) and a long name, separated by a comma or space or vertical bar('|')
 
 ### Problems
-
+handle path: can employ environment variables file ?
 * file path change after build (configuration file ?)
 * how to get app root path accurately
+* `pnpm` arguments for script and for itself 

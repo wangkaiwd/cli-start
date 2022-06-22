@@ -10,7 +10,7 @@ interface CreateOptions {
   bare?: boolean;
 }
 
-const create = async (options: CreateOptions) => {
+const create = async (appName: string, options: CreateOptions) => {
   const answer = await inquirer.prompt({
     type: 'checkbox',
     name: 'feature',
@@ -26,6 +26,7 @@ const create = async (options: CreateOptions) => {
       }
     ]
   });
+  console.log('answer', answer);
   // create project according selection
   const files = glob.sync(path.resolve(TEMPLATE_PATH, './test/**/*'), {
     ignore: ['**/node_modules/**'],
@@ -34,13 +35,16 @@ const create = async (options: CreateOptions) => {
   console.log(chalk.cyan('start create project ....'));
   // write file to pwd
   files.forEach(file => {
-    const relativeFilePath = path.relative(file, path.join(TEMPLATE_PATH, 'test'));
-    const filePath = path.join(process.cwd(), relativeFilePath);
+    const relativeFilePath = path.relative(path.join(TEMPLATE_PATH, 'test'), file);
+    const filePath = path.join(process.cwd(), appName, relativeFilePath);
     const stats = fs.statSync(file);
     if (stats.isFile()) {
+      const dirname = path.dirname(filePath);
       const data = fs.readFileSync(file);
-      console.log('filePath', relativeFilePath);
-      // fs.writeFileSync(filePath, data);
+      if (!fs.existsSync(dirname)) {
+        fs.mkdirSync(dirname, { recursive: true });
+      }
+      fs.writeFileSync(filePath, data, { flag: 'w' });
     }
   });
   console.log(chalk.cyan('create project successfully!'));
