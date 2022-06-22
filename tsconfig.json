@@ -4,7 +4,7 @@
     /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     "moduleResolution": "Node",
     /* Modules */
-    "module": "esnext",
+    "module": "commonjs",
     /* Specify what module code is generated. */
 
     "esModuleInterop": true,
@@ -23,5 +23,8 @@
   },
   "include": [
     "lib/**/*"
+  ],
+  "exclude": [
+    "templates/**"
   ]
 }

@@ -39,3 +39,8 @@ some knowledge:
 ### Option
 
 * each option can have a short flag(single character) and a long name, separated by a comma or space or vertical bar('|')
+
+### Problems
+
+* file path change after build (configuration file ?)
+* how to get app root path accurately
