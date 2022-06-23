@@ -33,7 +33,10 @@ const create = async (appName: string, options: CreateOptions) => {
     dot: true
   });
   console.log(chalk.cyan('start create project ....'));
-  // write file to pwd
+  // fixme:
+  // 1. extract to semantic method
+  // 2. handle path
+  // 3. writeFile
   files.forEach(file => {
     const relativeFilePath = path.relative(path.join(TEMPLATE_PATH, 'test'), file);
     const filePath = path.join(process.cwd(), appName, relativeFilePath);
