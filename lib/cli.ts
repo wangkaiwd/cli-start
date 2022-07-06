@@ -39,4 +39,3 @@ program.on('--help', () => {
 });
 
 program.parse();
-
