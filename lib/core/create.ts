@@ -17,12 +17,12 @@ const create = async (appName: string, options: CreateOptions) => {
     message: 'Please select feature',
     choices: [
       {
-        name: 'Babel',
-        value: 'babel',
+        name: 'Router',
+        value: 'router',
       },
       {
-        name: 'TypeScript',
-        value: 'typescript',
+        name: 'Component library',
+        value: 'component library',
       }
     ]
   });
