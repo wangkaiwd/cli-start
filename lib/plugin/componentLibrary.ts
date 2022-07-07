@@ -1,1 +1,5 @@
-console.log('componentLibrary');
+const componentLibrary = () => {
+
+};
+
+export default componentLibrary;
